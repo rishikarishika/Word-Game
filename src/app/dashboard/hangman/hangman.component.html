@@ -1,0 +1,17 @@
+<div class="hangman-container">
+  <h1>Hangman Game</h1>
+  <div class="word">
+    <span *ngFor="let letter of displayWord">{{ letter }}</span>
+  </div>
+  <div class="letters">
+    <button *ngFor="let letter of letters" (click)="guessLetter(letter)" [disabled]="guessedLetters.includes(letter)">
+      {{ letter }}
+    </button>
+  </div>
+  <div class="status">
+    <p>Wrong guesses: {{ wrongGuesses }}</p>
+    <p *ngIf="isGameOver">Game Over! The word was: {{ word }}</p>
+    <p *ngIf="isGameWon">Congratulations! You guessed the word!</p>
+  </div>
+  <button (click)="resetGame()">Reset Game</button>
+</div>

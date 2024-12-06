@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Art+Nouveau+Letterpress&display=swap');
+
+
+.bouncing-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Art Nouveau Letterpress', sans-serif;
+    font-size: 16px;
+    margin: 0px;
+  }
+  
+  .char1 { color: #38b6ff; animation: bounce 2s infinite; }
+  .char2 { color: #1cc674; animation: bounce 2s infinite 0.1s; }
+  .char3 { color: #ff3e3e; animation: bounce 2s infinite 0.2s; }
+  .char4 { color: #ffb100; animation: bounce 2s infinite 0.3s; }
+  .char5 { color: transparent; animation: bounce 2s infinite 0.4s; }
+  .char6 { color: #ff3131; animation: bounce 2s infinite 0.5s; }
+  .char7 { color: #a40385; animation: bounce 2s infinite 0.6s; }
+  .char8 { color: #1b00c4; animation: bounce 2s infinite 0.7s; }
+  .char9 { color: #a20000; animation: bounce 2s infinite 0.8s; }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(10, 0, 0, 0.99); /* Black with transparency for glass effect */
+  backdrop-filter: blur(10px); /* Blur background for glass effect */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left .logo {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-right h2 {
+  margin: 0;
+  font-size: 12px;
+  color: gold; /* Gold color for Level 2 */
+  margin-right: 20px;
+}
+
+.header-right a {
+  color: white;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.profile-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-icon {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  color: black;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-left, .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header-right {
+    margin-top: 10px;
+  }
+
+  .header-right h2, .header-right a {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .profile-icon {
+    width: 30px;
+  }
+
+  .dropdown-content {
+    right: 10px;
+  }
+}

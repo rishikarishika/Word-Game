@@ -1,0 +1,51 @@
+.quotes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-image: url(../../../assets/Background.jpg);
+  background-repeat: no-repeat;
+  color: aliceblue;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.word {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.letters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.letters button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.status {
+  margin-bottom: 20px;
+}
+
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

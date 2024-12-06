@@ -1,0 +1,8 @@
+<div class="login-container">
+  <h1>Word Game</h1>
+  <img src="assets/word-game-logo.png" alt="Word Game Logo" class="logo">
+
+  <p>Enter username</p>
+  <input [(ngModel)]="username" placeholder="Enter your username" />
+  <button (click)="login()" [disabled]="!username">Login</button>
+</div>
